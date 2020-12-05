@@ -58,8 +58,8 @@ Feel free to open a PR to enhance it :)
 
 # Sources/Inspiration
 
-[Mutegram](https://github.com/mxs42/mutegram) by [mxs42](https://github.com/mxs42)
-[Windows Privilege Escalation - DLL Proxying](https://itm4n.github.io/dll-proxying/) by [itm4n](https://github.com/itm4n)
-[NoFlashWindow](https://github.com/mrexodia/NoFlashWindow) by [mrexodia](https://github.com/mrexodia)
+[Mutegram](https://github.com/mxs42/mutegram) by [mxs42](https://github.com/mxs42) <br/>
+[Windows Privilege Escalation - DLL Proxying](https://itm4n.github.io/dll-proxying/) by [itm4n](https://github.com/itm4n) <br/>
+[NoFlashWindow](https://github.com/mrexodia/NoFlashWindow) by [mrexodia](https://github.com/mrexodia) <br/>
 
 [https://en.wikipedia.org/wiki/X86_instruction_listings](https://en.wikipedia.org/wiki/X86_instruction_listings)
