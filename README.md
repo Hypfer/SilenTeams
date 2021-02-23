@@ -31,6 +31,10 @@ After all, this DLL could in theory inject anything into your Teams Process.
 
 Download the SilenTeamsInstaller.ps1 and run it.
 
+PowerShell one-liner to run the latest install script:
+
+`Set-ExecutionPolicy -ExecutionPolicy Unrestricted -Scope Process -Force; Invoke-WebRequest -UseBasicParsing https://raw.githubusercontent.com/Hypfer/SilenTeams/master/SilenTeamsInstaller.ps1 | Invoke-Expression`
+
 # Manual Installation
 1. Place the fake `dbghelp.dll` in `%LOCALAPPDATA%\Microsoft\Teams\current` and also copy `C:\Windows\System32\dbghelp.dll`
 to `%LOCALAPPDATA%\Microsoft\Teams\current\dbghelp_orig.dll`.

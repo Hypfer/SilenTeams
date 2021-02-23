@@ -6,10 +6,13 @@ Write-Output "Please make sure to exit teams before running this"
 
 if(Test-Path $TeamsCurrentPath) {
     Write-Output "Downloading fake dbghelp.dll"
-    Invoke-WebRequest -URI "https://github.com/Hypfer/SilenTeams/releases/download/v1.0.0/dbghelp.dll" -OutFile $TeamsCurrentPath"\dbghelp.dll"
+    $latestRelease = Invoke-WebRequest https://api.github.com/repos/Hypfer/SilenTeams/releases/latest -UseBasicParsing -Headers @{"Accept"="application/json"}
+    $json = $latestRelease.Content | ConvertFrom-Json
+    Invoke-WebRequest $json.assets.browser_download_url -UseBasicParsing -OutFile $(Join-Path "$TeamsCurrentPath" $json.assets.name)
+    
     Write-Output "Downloaded fake dbghelp.dll"
     Write-Output "Copying real dbghelp.dll"
-    Copy-Item "C:\Windows\System32\dbghelp.dll" -Destination $TeamsCurrentPath"\dbghelp_orig.dll"
+    Copy-Item "C:\Windows\System32\dbghelp.dll" $(Join-Path "$TeamsCurrentPath" "dbghelp_orig.dll") -Force
     Write-Output "Copied real dbghelp.dll"
 
     Write-Output "Enjoy not being annoyed by Teams anymore"
