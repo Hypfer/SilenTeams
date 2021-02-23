@@ -28,6 +28,10 @@ You are of course encouraged to build it yourself instead of just downloading a 
 After all, this DLL could in theory inject anything into your Teams Process.
 
 # Installation
+
+Download the SilenTeamsInstaller.ps1 and run it.
+
+# Manual Installation
 1. Place the fake `dbghelp.dll` in `%LOCALAPPDATA%\Microsoft\Teams\current` and also copy `C:\Windows\System32\dbghelp.dll`
 to `%LOCALAPPDATA%\Microsoft\Teams\current\dbghelp_orig.dll`.
 
@@ -36,7 +40,7 @@ to `%LOCALAPPDATA%\Microsoft\Teams\current\dbghelp_orig.dll`.
 3. Enjoy not being disturbed by never-ending taskbar flashing.
 
 
-Note that this may not survive a Teams update. I haven't tested that yet.
+Note that this will not survive a Teams updates.
 In that case, simply repeat step 1 and be happy again. :)
 
 # How it works
